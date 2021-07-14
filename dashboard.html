@@ -1,0 +1,395 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+        <style>         
+            @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+          :root {
+            --d: 700ms;
+            --e: cubic-bezier(0.19, 1, 0.22, 1);
+            --font-sans: "Rubik", sans-serif;
+            --font-serif: "Cardo", serif;
+          }
+
+          * {
+            box-sizing: border-box;
+          }
+
+          html,
+          body {
+            height: 100%;
+          }
+
+
+          .dd_heading{
+            text-align: center;
+            font-family: roboto thin;
+          }
+
+          .page-content {
+            display: grid;
+            grid-gap: 1rem;
+            padding: 1rem;
+            max-width: 1024px;
+            margin: 0 auto;
+            font-family: var(--font-sans);
+          }
+          @media (min-width: 600px) {
+            .page-content {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+          @media (min-width: 800px) {
+            .page-content {
+              grid-template-columns: repeat(4, 1fr);
+            }
+          }
+
+          .d_card {
+            position: relative;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: end;
+            align-items: flex-end;
+            overflow: hidden;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            color: whitesmoke;
+            background-color: whitesmoke;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+              0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+              0 16px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+          }
+          @media (min-width: 600px) {
+            .d_card {
+              height: 350px;
+            }
+          }
+          .d_card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            background-size: cover;
+            background-position: 0 0;
+            -webkit-transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
+            transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
+            transition: transform calc(var(--d) * 1.5) var(--e);
+            transition: transform calc(var(--d) * 1.5) var(--e),
+              -webkit-transform calc(var(--d) * 1.5) var(--e);
+            pointer-events: none;
+          }
+          .d_card:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            pointer-events: none;
+            background-image: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              from(rgba(0, 0, 0, 0)),
+              color-stop(11.7%, rgba(0, 0, 0, 0.009)),
+              color-stop(22.1%, rgba(0, 0, 0, 0.034)),
+              color-stop(31.2%, rgba(0, 0, 0, 0.072)),
+              color-stop(39.4%, rgba(0, 0, 0, 0.123)),
+              color-stop(46.6%, rgba(0, 0, 0, 0.182)),
+              color-stop(53.1%, rgba(0, 0, 0, 0.249)),
+              color-stop(58.9%, rgba(0, 0, 0, 0.32)),
+              color-stop(64.3%, rgba(0, 0, 0, 0.394)),
+              color-stop(69.3%, rgba(0, 0, 0, 0.468)),
+              color-stop(74.1%, rgba(0, 0, 0, 0.54)),
+              color-stop(78.8%, rgba(0, 0, 0, 0.607)),
+              color-stop(83.6%, rgba(0, 0, 0, 0.668)),
+              color-stop(88.7%, rgba(0, 0, 0, 0.721)),
+              color-stop(94.1%, rgba(0, 0, 0, 0.762)),
+              to(rgba(0, 0, 0, 0.79))
+            );
+            background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0) 0%,
+              rgba(0, 0, 0, 0.009) 11.7%,
+              rgba(0, 0, 0, 0.034) 22.1%,
+              rgba(0, 0, 0, 0.072) 31.2%,
+              rgba(0, 0, 0, 0.123) 39.4%,
+              rgba(0, 0, 0, 0.182) 46.6%,
+              rgba(0, 0, 0, 0.249) 53.1%,
+              rgba(0, 0, 0, 0.32) 58.9%,
+              rgba(0, 0, 0, 0.394) 64.3%,
+              rgba(0, 0, 0, 0.468) 69.3%,
+              rgba(0, 0, 0, 0.54) 74.1%,
+              rgba(0, 0, 0, 0.607) 78.8%,
+              rgba(0, 0, 0, 0.668) 83.6%,
+              rgba(0, 0, 0, 0.721) 88.7%,
+              rgba(0, 0, 0, 0.762) 94.1%,
+              rgba(0, 0, 0, 0.79) 100%
+            );
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: -webkit-transform calc(var(--d) * 2) var(--e);
+            transition: -webkit-transform calc(var(--d) * 2) var(--e);
+            transition: transform calc(var(--d) * 2) var(--e);
+            transition: transform calc(var(--d) * 2) var(--e),
+              -webkit-transform calc(var(--d) * 2) var(--e);
+          }
+          .d_card:nth-child(1):before {
+            background-image: url(img/dashboard/chemistry_dashboard.jfif);
+          }
+          .d_card:nth-child(2):before {
+            background-image: url(img/dashboard/physics_dashboard.jpg);
+          }
+          .d_card:nth-child(3):before {
+            background-image: url(img/dashboard/math_dashboard.jpg);
+          }
+          .d_card:nth-child(4):before {
+            background-image: url(img/dashboard/other_dashboard.jfif);
+          }
+
+          .content {
+            position: relative;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-align: center;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            -webkit-transition: -webkit-transform var(--d) var(--e);
+            transition: -webkit-transform var(--d) var(--e);
+            transition: transform var(--d) var(--e);
+            transition: transform var(--d) var(--e), -webkit-transform var(--d) var(--e);
+            z-index: 1;
+          }
+          .content > * + * {
+            margin-top: 1rem;
+          }
+
+          .heading {
+            font-size: 1.3rem;
+            font-weight: bold;
+            line-height: 1.2;
+          }
+
+          .data-content {
+            font-family: var(--font-serif);
+            font-size: 1.125rem;
+            font-style: italic;
+            line-height: 1.35;
+          }
+
+          @media (hover: hover) and (min-width: 600px) {
+            .d_card:after {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+
+            .content {
+              -webkit-transform: translateY(calc(100% - 4.5rem));
+              transform: translateY(calc(100% - 4.5rem));
+            }
+            .content > *:not(.heading) {
+              opacity: 0;
+              -webkit-transform: translateY(1rem);
+              transform: translateY(1rem);
+              -webkit-transition: opacity var(--d) var(--e),
+                -webkit-transform var(--d) var(--e);
+              transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+              transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+              transition: transform var(--d) var(--e), opacity var(--d) var(--e),
+                -webkit-transform var(--d) var(--e);
+            }
+
+            .d_card:hover,
+            .d_card:focus-within {
+              -webkit-box-align: center;
+              align-items: center;
+            }
+            .d_card:hover:before,
+            .d_card:focus-within:before {
+              -webkit-transform: translateY(-4%);
+              transform: translateY(-4%);
+            }
+            .d_card:hover:after,
+            .d_card:focus-within:after {
+              -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+            }
+            .d_card:hover .content,
+            .d_card:focus-within .content {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+            .d_card:hover .content > *:not(.heading),
+            .d_card:focus-within .content > *:not(.heading) {
+              opacity: 1;
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+              -webkit-transition-delay: calc(var(--d) / 8);
+              transition-delay: calc(var(--d) / 8);
+            }
+
+            .d_card:focus-within:before,
+            .d_card:focus-within:after,
+            .d_card:focus-within .content,
+            .d_card:focus-within .content > *:not(.heading) {
+              -webkit-transition-duration: 0s;
+              transition-duration: 0s;
+            }
+          }
+
+        </style>
+        
+    </head>
+    <body>
+      <header class="header-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3">
+              <div class="site-logo">
+                <img src="img/logo.png" alt="">
+              </div>
+              <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+              <a href="index.html" class="site-btn header-btn">Log Out</a>
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="About.html">About us</a></li>
+                  <li><a href="courses.html">Courses</a></li>
+                  <li><a href="blog.html">Achievements</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Header section end -->
+    
+    
+      <!-- Page info -->
+      <div class="page-info-section set-bg" style= "background-image: url('img/page-bg/4.jpg')">
+        <div class="container">
+          <div class="site-breadcrumb">
+            <a href="#">Login</a>
+            <span>User</span>
+          </div>
+        </div>
+      </div>
+      <!-- Page info end -->
+      <section class="search-section ss-other-page">
+		<div class="container">
+			<div class="search-warp" style="margin-bottom: 100px; ">
+				<div class="section-title text-white">
+					<h2><span>Select your course</span></h2>
+          <main class="page-content">
+            <div class="d_card">
+              <div class="content">
+                <h2 class="heading"><a href="single-course.html">Chemistry</a></h2>
+                <p class="data-content"> </p>
+              </div>
+            </div>
+            <div class="d_card" style="">
+              <div class="content">
+                <h2 class="heading">Physics</h2>
+                <p class="data-content"></p>
+              </div>
+            </div>
+            <div class="d_card" style="">
+              <div class="content">
+                <h2 class="heading">Math</h2>
+                <p class="data-content"></p>
+              </div>
+              </div>
+              <div class="d_card" style="">
+                <div class="content">
+                  <h2 class="heading">Others</h2>
+                  <p class="data-content"></p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </main>
+        </section>
+        </div>
+        
+			</div>
+		</div>
+	
+                  
+          
+
+      <!-- footer section -->
+	<footer class="footer-section spad pb-0">
+		<div class="footer-top">
+			<div class="footer-warp">
+				<div class="row">
+					<div class="widget-item">
+						<h4>Contact Info</h4>
+						<ul class="contact-list">
+							<li>24 , Patel Indl.estate, <br> Opp.police Station, Dahisa</li>
+							<li>+91 1234567890</li>
+							<li>prodigy@gmail.com</li>
+						</ul>
+					</div>
+					<div class="widget-item">
+						<h4>Class 12th</h4>
+						<ul>
+							<li><a href="">Mathematics</a></li>
+							<li><a href="">Biology</a></li>
+							<li><a href="">Physics</a></li>
+							<li><a href="">Chemistry</a></li>
+						</ul>
+					</div>
+					<div class="widget-item">
+						
+					</div>
+					<div class="widget-item">
+
+					</div>
+					<div class="widget-item" style="left: 200px;">
+						<h4>Newsletter</h4>
+						<form class="footer-newslatter">
+							<input type="email" placeholder="E-mail">
+							<button class="site-btn">Subscribe</button>
+							<p>*We don’t spam*</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		</footer>
+
+  <script>
+    function check(form)/*function to check userid & password*/
+		{
+		 /*the following code checkes whether the entered userid and password are matching*/
+		 if(form.userid.value == "1309" && form.pswrd.value == "1234")
+		  {
+			window.open('dashboard.html');/*opens the target page while Id & password matches*/
+			window.close();
+
+		  }
+		 else
+		 {
+		   alert("Error Password or Username")/*displays error message*/
+		  }
+		}
+  </script>
+    </body>
+</html>
